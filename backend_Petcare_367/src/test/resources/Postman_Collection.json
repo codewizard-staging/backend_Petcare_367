@@ -1,0 +1,1890 @@
+{
+	"info": 
+	{
+		"_postman_id": "1a33718f-0e82-4bb3-b13c-2b4aec9504d2",
+		"name": "Petcare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7529375"
+	},
+	"item": [
+	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "OrderByOrderId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OrderId\":\"gainsay\",\"OrderDate\":\"1993-01-05\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a Order",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OrderId\":\"gainsay\",\"OrderDate\":\"1993-01-05\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of OrderId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')/OrderId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders(OrderId)",
+										"OrderId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders?$filter=OrderId eq 'gainsay'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrderId eq 'gainsay'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of OrderDate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')/OrderDate/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders(OrderDate)",
+										"OrderDate",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders?$filter=OrderDate eq 1993-01-05\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrderDate eq 1993-01-05\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')/customer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders('<<replace_with_keyFieldValue>>')",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on Orders navigation property customer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')?$expand=customer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders('<<replace_with_keyFieldValue>>')"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "customer"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')/orderItems",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders('<<replace_with_keyFieldValue>>')",
+										"orderItems"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on Orders navigation property orderItems",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Orders('<<replace_with_keyFieldValue>>')?$expand=orderItems",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Orders('<<replace_with_keyFieldValue>>')"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "orderItems"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CustomerByCustomerId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"CustomerId\":\"moan\",\"Name\":\"Kamalesh Bhattathiri\",\"Email\":\"chandraprabha.chaturvedi@hotmail.com\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a Customer",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"CustomerId\":\"moan\",\"Name\":\"Kamalesh Bhattathiri\",\"Email\":\"chandraprabha.chaturvedi@hotmail.com\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of CustomerId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')/CustomerId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers(CustomerId)",
+										"CustomerId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers?$filter=CustomerId eq 'moan'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "CustomerId eq 'moan'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')/Name/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers(Name)",
+										"Name",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers?$filter=Name eq 'Kamalesh Bhattathiri'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Name eq 'Kamalesh Bhattathiri'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')/Email/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers(Email)",
+										"Email",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers?$filter=Email eq 'chandraprabha.chaturvedi@hotmail.com'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Email eq 'chandraprabha.chaturvedi@hotmail.com'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')/orders",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers('<<replace_with_keyFieldValue>>')",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on Customers navigation property orders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Customers('<<replace_with_keyFieldValue>>')?$expand=orders",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Customers('<<replace_with_keyFieldValue>>')"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "orders"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "OrderItem",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "OrderItemByOrderItemId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OrderItemId\":\"crack\",\"Quantity\":92}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a OrderItem",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"OrderItemId\":\"crack\",\"Quantity\":92}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of OrderItemId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')/OrderItemId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems(OrderItemId)",
+										"OrderItemId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems?$filter=OrderItemId eq 'crack'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "OrderItemId eq 'crack'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Quantity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')/Quantity/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems(Quantity)",
+										"Quantity",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems?$filter=Quantity eq 92\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Quantity eq 92\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')/order",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems('<<replace_with_keyFieldValue>>')",
+										"order"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on OrderItems navigation property order",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')?$expand=order",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems('<<replace_with_keyFieldValue>>')"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "order"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+,  								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')/product",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems('<<replace_with_keyFieldValue>>')",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on OrderItems navigation property product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/OrderItems('<<replace_with_keyFieldValue>>')?$expand=product",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"OrderItems('<<replace_with_keyFieldValue>>')"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "product"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ]},     	
+	
+			        
+        
+ 	 	
+	
+	
+
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Request",
+					"item": [
+						{
+							"name": "GET All Records",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ProductByProductId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+
+		{
+					"name": "Post Request",
+					"item": [
+						{
+							"name": "POST Request",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ProductId\":\"test\",\"Name\":\"Ghanashyam Joshi\",\"Price\":656132.97}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									]
+								}
+							},
+							"response": []
+						}
+						]
+						},
+		{
+					"name": "Delete Request",
+					"item": [
+						{
+							"name": "Delete a Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "PATCH Request",
+					"item": [
+						{
+							"name": "Patch Request of entity",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"ProductId\":\"test\",\"Name\":\"Ghanashyam Joshi\",\"Price\":656132.97}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products('<<replace_with_keyFieldValue>>')"
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 1",
+					"item": [		        
+		    
+		                    
+						{
+							"name": "GET raw value of ProductId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')/ProductId/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products(ProductId)",
+										"ProductId",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products?$filter=ProductId eq 'test'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "ProductId eq 'test'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')/Name/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products(Name)",
+										"Name",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products?$filter=Name eq 'Ghanashyam Joshi'\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Name eq 'Ghanashyam Joshi'\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+, 			    
+		                    
+						{
+							"name": "GET raw value of Price",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')/Price/$value",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products(Price)",
+										"Price",
+										"$value"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $filter option on a primitive field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products?$filter=Price eq 656132.97\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									],
+									"query": [
+										{
+											"key": "$filter",
+											"value": "Price eq 656132.97\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        },
+		{
+					"name": "System Query Options 4",
+					"item": [
+					   {
+							"name": "GET #orderBy option on Date field entity set",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products?$orderby=<<Replace with PropName of Date Type>> desc\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Date Type>> desc\n"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $orderby decimal field",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products?$orderby=<<Replace with PropName of Decimal Type>> desc",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									],
+									"query": [
+										{
+											"key": "$orderby",
+											"value": "<<Replace with PropName of Decimal Type>> desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+	                   {
+							"name": "Get $count option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products/$count",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products",
+										"$count"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $top option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products?$top=2",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									],
+									"query": [
+										{
+											"key": "$top",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET $skip option on entityset",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products?$skip=2\n",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products"
+									],
+									"query": [
+										{
+											"key": "$skip",
+											"value": "2\n"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					    ]
+				        }
+						
+ ,
+		{
+					"name": "Navigation  Request",
+					"item": [
+								{
+							"name": "Navigation Request for an Entity",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')/orderItems",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products('<<replace_with_keyFieldValue>>')",
+										"orderItems"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get $expand option on Products navigation property orderItems",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{ServiceRoot}}/Products('<<replace_with_keyFieldValue>>')?$expand=orderItems",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{ServiceRoot}}",
+										"Products('<<replace_with_keyFieldValue>>')"
+									],
+									"query": [
+										{
+											"key": "$expand",
+											"value": "orderItems"
+										}
+									]
+								}
+							}
+							,
+							"response": []
+						}
+					    ]
+				        }
+  ,       		{
+					"name": "metadata request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/{{ServiceRoot}}/$metadata",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"{{ServiceRoot}}",
+								"$metadata"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]}

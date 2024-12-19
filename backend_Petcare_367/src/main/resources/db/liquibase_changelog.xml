@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <property name="schemaName" value="petcare_023"></property>
+    <property name="author=" value="db-designer"></property>
+    <changeSet id="v1-01-01" author="${author}">
+    
+ <createTable schemaName="${schemaName}" tableName="Order">
+    <column name="OrderId" type="VARCHAR(250)" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="OrderDate" type="DATE" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="Customer">
+    <column name="CustomerId" type="VARCHAR(250)" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="Name" type="VARCHAR(250)" />
+    
+     <column name="Email" type="VARCHAR(250)" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="OrderItem">
+    <column name="OrderItemId" type="VARCHAR(250)" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="Quantity" type="INTEGER" />
+    
+ 	
+</createTable>
+ <createTable schemaName="${schemaName}" tableName="Product">
+    <column name="ProductId" type="VARCHAR(250)" >
+        <constraints nullable="false" primaryKey="true"/>
+    </column>
+     <column name="Name" type="VARCHAR(250)" />
+    
+     <column name="Price" type="DECIMAL" />
+    
+ 	
+</createTable>
+	
+  <createTable schemaName="${schemaName}" tableName="Customerorders">
+	<column name="Id" type="SERIAL" autoIncrement="true">
+		<constraints primaryKey="true" nullable="false"/>
+	</column>
+	<column name="CustomerId" type="VARCHAR(250)" />
+	<column name="OrderId" type="VARCHAR(250)" />
+</createTable>
+  <createTable schemaName="${schemaName}" tableName="ProductorderItems">
+	<column name="Id" type="SERIAL" autoIncrement="true">
+		<constraints primaryKey="true" nullable="false"/>
+	</column>
+	<column name="ProductId" type="VARCHAR(250)" />
+	<column name="OrderItemId" type="VARCHAR(250)" />
+</createTable>
+  <createTable schemaName="${schemaName}" tableName="OrderorderItems">
+	<column name="Id" type="SERIAL" autoIncrement="true">
+		<constraints primaryKey="true" nullable="false"/>
+	</column>
+	<column name="OrderId" type="VARCHAR(250)" />
+	<column name="OrderItemId" type="VARCHAR(250)" />
+</createTable>
+
+ 
+	<addForeignKeyConstraint baseTableName="Customerorders" baseTableSchemaName="${schemaName}"  baseColumnNames="CustomerId" constraintName="Order_CustomerId_fk"
+	                                  referencedTableName="Customer" referencedTableSchemaName="${schemaName}" referencedColumnNames="CustomerId"/>
+	                                  
+	<addForeignKeyConstraint baseTableName="Customerorders" baseTableSchemaName="${schemaName}"  baseColumnNames="OrderId" constraintName="Order_OrderId_fk"
+	                                  referencedTableName="Order" referencedTableSchemaName="${schemaName}" referencedColumnNames="OrderId"/>
+ 
+ 
+	<addForeignKeyConstraint baseTableName="ProductorderItems" baseTableSchemaName="${schemaName}"  baseColumnNames="ProductId" constraintName="OrderItem_ProductId_fk"
+	                                  referencedTableName="Product" referencedTableSchemaName="${schemaName}" referencedColumnNames="ProductId"/>
+	                                  
+	<addForeignKeyConstraint baseTableName="ProductorderItems" baseTableSchemaName="${schemaName}"  baseColumnNames="OrderItemId" constraintName="OrderItem_OrderItemId_fk"
+	                                  referencedTableName="OrderItem" referencedTableSchemaName="${schemaName}" referencedColumnNames="OrderItemId"/>
+ 
+ 
+	<addForeignKeyConstraint baseTableName="OrderorderItems" baseTableSchemaName="${schemaName}"  baseColumnNames="OrderId" constraintName="OrderItem_OrderId_fk"
+	                                  referencedTableName="Order" referencedTableSchemaName="${schemaName}" referencedColumnNames="OrderId"/>
+	                                  
+	<addForeignKeyConstraint baseTableName="OrderorderItems" baseTableSchemaName="${schemaName}"  baseColumnNames="OrderItemId" constraintName="OrderItem_OrderItemId_fk"
+	                                  referencedTableName="OrderItem" referencedTableSchemaName="${schemaName}" referencedColumnNames="OrderItemId"/>
+ 
+	
+ 
+	<addColumn tableName="Order" schemaName="${schemaName}">
+	    <column name="Ordercustomer" type="VARCHAR(250)"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="Order" baseColumnNames="Ordercustomer" baseTableSchemaName="${schemaName}" constraintName="Order_customer_fk" referencedTableName="Customer"
+	                                 referencedColumnNames="CustomerId" referencedTableSchemaName="${schemaName}"/>
+ 
+  
+	<addColumn tableName="OrderItem" schemaName="${schemaName}">
+	    <column name="OrderItemorder" type="VARCHAR(250)"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="OrderItem" baseColumnNames="OrderItemorder" baseTableSchemaName="${schemaName}" constraintName="OrderItem_order_fk" referencedTableName="Order"
+	                                 referencedColumnNames="OrderId" referencedTableSchemaName="${schemaName}"/>
+ 
+
+	<addColumn tableName="OrderItem" schemaName="${schemaName}">
+	    <column name="OrderItemproduct" type="VARCHAR(250)"/>
+	</addColumn>
+	<addForeignKeyConstraint baseTableName="OrderItem" baseColumnNames="OrderItemproduct" baseTableSchemaName="${schemaName}" constraintName="OrderItem_product_fk" referencedTableName="Product"
+	                                 referencedColumnNames="ProductId" referencedTableSchemaName="${schemaName}"/>
+ 
+ 	    </changeSet>
+</databaseChangeLog>
